@@ -25,19 +25,6 @@ Autoloader::register();
  * Fuel::STAGING
  * Fuel::PRODUCTION
  */
-switch (isset($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] : ''){
-    case 'production.co.jp':
-        //本番
-        Fuel::$env = Fuel::PRODUCTION;
-        break;
-    case 'staging.co.jp':
-        //テスト環境 
-        Fuel::$env = Fuel::STAGING;
-        break;
-    default:
-        //ローカル環境
-        Fuel::$env = Fuel::DEVELOPMENT;
-        break;
-}
+Fuel::$env = (isset($_SERVER['FUEL_ENV']) ? $_SERVER['FUEL_ENV'] : Fuel::DEVELOPMENT);
 // Initialize the framework with the config file.
 Fuel::init('config.php');
