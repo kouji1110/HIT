@@ -1,0 +1,13 @@
+<?php defined('COREPATH') or exit('No direct script access allowed'); ?>
+
+ERROR - 2014-07-03 04:16:14 --> Parsing Error - syntax error, unexpected end of file in /Applications/MAMP/htdocs/HITFuel/fuel/app/classes/controller/user.php on line 125
+ERROR - 2014-07-03 04:17:03 --> Notice - Undefined variable: prevEnabled in /Applications/MAMP/htdocs/HITFuel/fuel/app/views/user/question.php on line 22
+ERROR - 2014-07-03 04:17:04 --> Notice - Undefined variable: prevEnabled in /Applications/MAMP/htdocs/HITFuel/fuel/app/views/user/question.php on line 22
+ERROR - 2014-07-03 04:32:05 --> Notice - Undefined index: markno in /Applications/MAMP/htdocs/HITFuel/fuel/app/classes/controller/user.php on line 93
+ERROR - 2014-07-03 04:32:16 --> Error - The requested view could not be found: user/questions in /Applications/MAMP/htdocs/HITFuel/fuel/core/classes/view.php on line 388
+ERROR - 2014-07-03 04:33:59 --> Parsing Error - syntax error, unexpected '}', expecting ',' or ';' in /Applications/MAMP/htdocs/HITFuel/fuel/app/views/user/questions.php on line 8
+ERROR - 2014-07-03 04:34:02 --> Parsing Error - syntax error, unexpected '}', expecting ',' or ';' in /Applications/MAMP/htdocs/HITFuel/fuel/app/views/user/questions.php on line 8
+ERROR - 2014-07-03 04:34:03 --> Parsing Error - syntax error, unexpected '}', expecting ',' or ';' in /Applications/MAMP/htdocs/HITFuel/fuel/app/views/user/questions.php on line 8
+ERROR - 2014-07-03 04:43:57 --> Notice - Undefined index: category in /Applications/MAMP/htdocs/HITFuel/fuel/app/classes/controller/user.php on line 92
+ERROR - 2014-07-03 14:48:12 --> 1049 - SQLSTATE[42000] [1049] Unknown database 'mytest' in /Applications/MAMP/htdocs/HITFuel/fuel/core/classes/database/pdo/connection.php on line 100
+ERROR - 2014-07-03 14:49:26 --> Error - SQLSTATE[42S22]: Column not found: 1054 Unknown column 't0.question_id' in 'field list' with query: "SELECT t0.question_id AS t0_c0, t0.year AS t0_c1, t0.question_no AS t0_c2, t0.question_sub_no AS t0_c3, t0.category AS t0_c4, t0.question_type AS t0_c5, t0.question_option AS t0_c6, t0.answer_num AS t0_c7, t0.question AS t0_c8, t0.sel1 AS t0_c9, t0.sel2 AS t0_c10, t0.sel3 AS t0_c11, t0.sel4 AS t0_c12, t0.sel5 AS t0_c13, t0.sel6 AS t0_c14, t0.sel7 AS t0_c15, t0.sel8 AS t0_c16, t0.sel9 AS t0_c17, t0.ans1 AS t0_c18, t0.ans2 AS t0_c19, t0.ans3 AS t0_c20, t0.ans4 AS t0_c21, t0.ans5 AS t0_c22, t0.explaination AS t0_c23, t0.free_cmt AS t0_c24, t0.update_date AS t0_c25 FROM questions AS t0 WHERE t0.year = 2013 ORDER BY t0.category ASC, t0.question_no ASC, t0.question_sub_no ASC" in /Applications/MAMP/htdocs/HITFuel/fuel/core/classes/database/pdo/connection.php on line 234

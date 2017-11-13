@@ -1,0 +1,1 @@
+<p>Copyright &copy; 2015-2017 KOJIMA All Rights Reserved.</p>

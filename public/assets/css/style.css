@@ -1,0 +1,21 @@
+div.rowElem label {
+    display:block;
+    float: left;
+    clear:both;
+    width:200px;
+    text-align: right;
+    margin-right: 20px;
+}
+
+div.rowElem textarea {
+    width: 600px;
+    height: 100px;
+}
+
+div.rowElem input[type="text"] {
+    width: 600px;
+}
+
+div.floatclear {
+    clear: both;
+}
