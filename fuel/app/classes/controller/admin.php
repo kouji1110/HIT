@@ -2,6 +2,16 @@
 
 class Controller_Admin extends Controller_Template {
 
+    public function before() {
+        parent::before();
+
+        // ログインチェック 
+        // ログインしてない場合はログイン画面へリダイレクト
+        if (!Auth::check()) {
+            Response::redirect('auth');
+        }
+    }
+    
     /**
      * 管理者トップ画面（マスタメンテ）
      */

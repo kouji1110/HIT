@@ -1,6 +1,13 @@
 <div class="contents_login">
 
     <?php
+    
+    if($message != "")
+    {
+        echo "<div class=\"auth_error\">";
+        echo "$message";
+        echo "</div>";
+    }
     echo Form::open(array('action' => 'auth', 'method' => 'POST', 'id' => 'hitForm'));
     echo "<p>ユーザ名とパスワードを入力してください。</p>";
     echo "<p class=\"item-title\">名前</p>";

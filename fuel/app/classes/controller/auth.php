@@ -83,16 +83,18 @@ class Controller_Auth extends Controller_Template {
                     // ログイン成功の場合、ユーザのメイン画面へリダイレクト
                     Response::redirect('user');
                 }
-                $result_validate = "ログインに失敗しました。";
+                $result_validate = "ユーザ名 or パスワードが誤っています";
             } else {
                 $result_validate = $validation->show_errors();
             }
         }
+        
+        $data = array();
+        $data['message'] = $result_validate;
 
         // ログイン失敗時　再度ログインフォームを表示
-
         $this->template->header = View::forge('layout/header');
-        $this->template->contents = View::forge('auth/login');
+        $this->template->contents = View::forge('auth/login',$data,false);
         $this->template->footer = View::forge('layout/footer');
     }
 
@@ -112,6 +114,14 @@ class Controller_Auth extends Controller_Template {
      */
     public function action_register() {
         
+    }
+    
+    /**
+     * ログイン
+     */
+    public function action_timeout() {
+        // トップページへリダイレクト
+        Response::redirect('/');
     }
 
 }

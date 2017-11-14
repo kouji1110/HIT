@@ -156,6 +156,7 @@ hr.leaf-line{
     width: 300px;
     margin-bottom: 20px;
     padding: 40px;
+    border-radius: 10px;
 }
 
 #hitForm p.item-title {
@@ -260,6 +261,14 @@ hr.leaf-line{
 
 #loginForm .description a {
 
+}
+
+.auth_error{
+    color: red;
+}
+
+.auth_error ul{
+    list-style-type: none;
 }
 
 /************************************
