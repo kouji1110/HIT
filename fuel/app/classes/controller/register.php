@@ -45,6 +45,31 @@ class Controller_Register extends Controller_Template {
                 $auth = Auth::instance();
                 $input = $validation->input();
                 if ($auth->create_user($input['username'], $input['password'], $input['email'])) {
+                    
+                    // メール送信テスト
+                    //作成日のタイムスタンプを取得します
+                    // $created=Model_User::find('first',array('where'=>array('email'=>$email)))->created_at;
+ //メール本文の作成
+ $body='<h2>仮登録完了</h2>';
+ $body.='<p>新規登録ありがとうございます。';
+ $body.='登録が安全に行われるようにアクティベートをお願いします。</p>';
+ $body.='<p>アクティベートするには下記のリンクをクリックして下さい。</p>';
+ $body.= '<p>'.Html::anchor('user/activate/'.$input['email'].'/'."testtest",'登録完了（アクティベート）').'</p>';
+ $body.='<p>48時間内にアクティベートを完了させて下さい。</p>';
+ //Eメールのインスタンス化
+ $sendmail=Email::forge();
+ //メール情報の設定
+ $sendmail->from('test@fankey.info','HIT事務局');
+ $sendmail->to($input['email'],$input['username']);
+ $sendmail->subject('アクティベート');
+ $sendmail->html_body($body);
+ //メールの送信
+ $sendmail->send();
+ //登録成功のメッセージ
+ Session::set_flash('success', '<span class="btn btn-primary span8">『'.$input['username'].'』を仮登録しました</span><br>');
+ //仮登録ページへ移動
+ Response::redirect('user/provisional');
+                    
                     $this->template->header = View::forge('layout/header');
                     $this->template->contents = "登録完了";
                     $this->template->footer = View::forge('layout/footer');

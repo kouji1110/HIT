@@ -25,7 +25,7 @@
                         <input type="password" id="password" name="password" value="" />
                         <br>
                         <div class="description">
-                            ※IDを取得していない方は<a href="#">こちら</a>から登録を行ってください。<br />
+                            ※IDを取得していない方は<?php echo Fuel\Core\Html::anchor("/register/",'こちら'); ?>から登録を行ってください。<br />
                         </div>
                         <input type="hidden" name="<?php echo \Config::get('security.csrf_token_key');?>" value="<?php echo \Security::fetch_token();?>" />
                         <div class="button-submit">

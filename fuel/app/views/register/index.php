@@ -1,8 +1,8 @@
 <div class="center">
-    <form action="register/create/" method="post" id="registerForm">
+    <form action="create/" method="post" id="registerForm">
         <p>
-        新規登録ユーザ登録を行います。
-        ユーザ名とパスワードを入力して登録ボタンを押してください。
+        新規登録ユーザ登録を行います。<br />
+        ユーザ名,パスワード,メールアドレスを入力して登録ボタンを押してください。
         </p>
         <div>
             <p class="item-title">ユーザ名</p>

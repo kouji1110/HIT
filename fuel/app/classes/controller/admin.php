@@ -59,7 +59,7 @@ class Controller_Admin extends Controller_Template {
             $sub_no = $_GET["sub_no"];
             $data["mode"] = "2"; // 更新
         } else {
-            $data["mode"] = "1"; // 更新
+            $data["mode"] = "1"; // 新規
         }
 
         if ($data["mode"] == 2) {
