@@ -13,6 +13,10 @@
             <input type="password" name="password" />
         </div>
         <div>
+            <p class="item-title">表示名</p>
+            <input type="text" name="dispname" />
+        </div>
+        <div>
             <p class="item-title">メールアドレス</p>
             <input type="text" name="email" />
         </div>
