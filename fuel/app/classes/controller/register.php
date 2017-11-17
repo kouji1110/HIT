@@ -92,5 +92,14 @@ class Controller_Register extends Controller_Template {
         $this->template->contents = $result_validate;
         $this->template->footer = View::forge('layout/footer');
     }
+    
+    /*
+     * 表示名の変更
+     */
+    public function action_modifydispname() {
+        $this->template->header = View::forge('layout/header');
+        $this->template->contents = View::forge('register/modify_dispname');
+        $this->template->footer = View::forge('layout/footer');
+    }
 
 }
